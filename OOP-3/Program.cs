@@ -6,22 +6,25 @@ namespace OOP_3
     {
         static void Main(string[] args)
         {
-            BankAccount account1 = new BankAccount()
-            {
-                balance = 123,
-                number = 777
-            };
-            BankAccount account2 = new BankAccount()
-            {
-                balance = 580,
-                number = 111
+            Console.WriteLine("Введите строку:");
 
-            };
+            string str = Console.ReadLine();
 
-            account1.TransactionCoins(account2, 120);
+            str = Rev(str);
 
-            account1.Info();
-            account2.Info();
+            Console.WriteLine(str);
+
+
+        }
+
+        static string Rev(string str)
+        {
+
+            char[] reverse = str.ToCharArray();
+
+            Array.Reverse(reverse);
+
+            return new string(reverse);
         }
     }
 }
